@@ -1,0 +1,71 @@
+{
+  "student_id": "STUDENT_01",
+  "student_name": "Alex Rivera",
+  "learning_goal": "Data Analyst",
+  "initial_known_skills": [],
+  "recommended_learning_path": [
+    {
+      "step": 1,
+      "course_id": "CS101",
+      "course_name": "Python Basics",
+      "difficulty": "Beginner",
+      "skills_acquired": [
+        "Python Basics"
+      ],
+      "prerequisite_status": "No prerequisites required.",
+      "selection_rule": "Prerequisite Unblocking (satisfies required prerequisite for downstream goal courses)",
+      "recommendation_reason": "Your natural ability to break down complex ideas as a teacher is the perfect asset as you take your very first steps into coding with Python. This gentle introduction will build your confidence by teaching you how to write basic instructions for a computer from scratch."
+    },
+    {
+      "step": 2,
+      "course_id": "CS103",
+      "course_name": "SQL & Database Fundamentals",
+      "difficulty": "Beginner",
+      "skills_acquired": [
+        "SQL"
+      ],
+      "prerequisite_status": "No prerequisites required.",
+      "selection_rule": "Prerequisite Unblocking (satisfies required prerequisite for downstream goal courses)",
+      "recommendation_reason": "With your first coding blocks in place, you'll now learn how to locate and retrieve structured data, similar to how you organize student files and school records. This step teaches you how to communicate with databases to find the exact information you need to analyze."
+    },
+    {
+      "step": 3,
+      "course_id": "CS104",
+      "course_name": "Data Analysis with Pandas & NumPy",
+      "difficulty": "Intermediate",
+      "skills_acquired": [
+        "Pandas",
+        "Data Analysis"
+      ],
+      "prerequisite_status": "All prerequisites satisfied: Python Basics",
+      "selection_rule": "Prerequisite Unblocking (satisfies required prerequisite for downstream goal courses)",
+      "recommendation_reason": "Now that you can write code and retrieve data, this course brings them together so you can start manipulating and cleaning larger datasets. This is where your journey gets exciting, as you'll begin finding actual patterns and insights in the information you've gathered."
+    },
+    {
+      "step": 4,
+      "course_id": "CS110",
+      "course_name": "Business Intelligence & Visualization",
+      "difficulty": "Intermediate",
+      "skills_acquired": [
+        "Data Visualization",
+        "Tableau/PowerBI"
+      ],
+      "prerequisite_status": "All prerequisites satisfied: SQL, Data Analysis",
+      "selection_rule": "Goal Relevance (directly supports Data Analyst)",
+      "recommendation_reason": "Your talent for explaining concepts to students will translate perfectly here as you learn to turn complex numbers into clear, beautiful charts and dashboards. This course will help you master the visual storytelling that key stakeholders rely on to make big business decisions."
+    },
+    {
+      "step": 5,
+      "course_id": "CS111",
+      "course_name": "Web Scraping & Data Ingestion",
+      "difficulty": "Intermediate",
+      "skills_acquired": [
+        "Web Scraping",
+        "API Ingestion"
+      ],
+      "prerequisite_status": "All prerequisites satisfied: Python Basics",
+      "selection_rule": "Goal Relevance (directly supports Data Analyst)",
+      "recommendation_reason": "To complete your transition to a self-sufficient data analyst, you will learn how to automatically gather fresh data directly from internet sources and websites. This final skill ensures you can find and work with your own datasets, preparing you fully for your new career."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "student_id": "STUDENT_04",
+  "student_name": "Dr. Elena Rostova",
+  "learning_goal": "AI Research Specialist",
+  "initial_known_skills": [
+    "Python Basics",
+    "Pandas",
+    "Data Analysis",
+    "Linear Algebra",
+    "Statistics",
+    "Machine Learning",
+    "Scikit-Learn"
+  ],
+  "recommended_learning_path": [
+    {
+      "step": 1,
+      "course_id": "CS107",
+      "course_name": "Deep Learning & Neural Networks",
+      "difficulty": "Advanced",
+      "skills_acquired": [
+        "Deep Learning",
+        "PyTorch"
+      ],
+      "prerequisite_status": "All prerequisites satisfied: Machine Learning",
+      "selection_rule": "Prerequisite Unblocking (satisfies required prerequisite for downstream goal courses)",
+      "recommendation_reason": "Building on your strong foundation in classical machine learning and linear algebra, this course will transition you from Scikit-Learn to PyTorch, enabling you to design and train complex neural networks. This shift is essential for your goal of becoming an AI Research Specialist, where deep learning frameworks are the industry standard."
+    },
+    {
+      "step": 2,
+      "course_id": "CS109",
+      "course_name": "Natural Language Processing & LLMs",
+      "difficulty": "Advanced",
+      "skills_acquired": [
+        "NLP",
+        "LLMs",
+        "Prompt Engineering"
+      ],
+      "prerequisite_status": "All prerequisites satisfied: Deep Learning",
+      "selection_rule": "Goal Relevance (directly supports AI Research Specialist)",
+      "recommendation_reason": "Now that you have mastered foundational deep learning, this course allows you to apply those concepts to the cutting-edge field of large language models. Mastering these advanced NLP techniques will position you at the forefront of modern AI research, enabling you to design and optimize next-generation language technologies."
+    }
+  ]
+}
