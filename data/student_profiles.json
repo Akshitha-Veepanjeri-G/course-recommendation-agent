@@ -1,0 +1,30 @@
+[
+  {
+    "student_id": "STUDENT_01",
+    "name": "Alex Rivera",
+    "background": "High school teacher with no prior programming or technical background, eager to start a career in data.",
+    "learning_goal": "Data Analyst",
+    "known_skills": []
+  },
+  {
+    "student_id": "STUDENT_02",
+    "name": "Sarah Chen",
+    "background": "Marketing Analyst with experience in Excel spreadsheets and basic self-taught Python scripting.",
+    "learning_goal": "Data Analyst",
+    "known_skills": ["Excel", "Python Basics"]
+  },
+  {
+    "student_id": "STUDENT_03",
+    "name": "Marcus Vance",
+    "background": "Junior Software Engineer with a solid programming and mathematics foundation, wanting to transition into ML engineering.",
+    "learning_goal": "Machine Learning Engineer",
+    "known_skills": ["Python Basics", "Data Structures", "SQL", "Linear Algebra", "Statistics"]
+  },
+  {
+    "student_id": "STUDENT_04",
+    "name": "Dr. Elena Rostova",
+    "background": "Experienced Data Scientist with classical machine learning experience seeking to specialize in Deep Learning and LLMs.",
+    "learning_goal": "AI Research Specialist",
+    "known_skills": ["Python Basics", "Pandas", "Data Analysis", "Linear Algebra", "Statistics", "Machine Learning", "Scikit-Learn"]
+  }
+]

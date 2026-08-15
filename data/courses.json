@@ -1,0 +1,101 @@
+[
+  {
+    "course_id": "CS101",
+    "course_name": "Python Basics",
+    "description": "Fundamental Python programming concepts including variables, data types, loops, functions, and control flow.",
+    "skills_taught": ["Python Basics"],
+    "prerequisites": [],
+    "difficulty": "Beginner",
+    "supported_goals": ["Data Analyst", "Machine Learning Engineer", "Python Developer", "AI Research Specialist"]
+  },
+  {
+    "course_id": "CS102",
+    "course_name": "Data Structures & Algorithms",
+    "description": "Core data structures (lists, dicts, stacks, trees) and basic algorithmic efficiency in Python.",
+    "skills_taught": ["Data Structures"],
+    "prerequisites": ["Python Basics"],
+    "difficulty": "Intermediate",
+    "supported_goals": ["Machine Learning Engineer", "Python Developer"]
+  },
+  {
+    "course_id": "CS103",
+    "course_name": "SQL & Database Fundamentals",
+    "description": "Relational database design, writing SQL queries, joins, aggregations, and data manipulation.",
+    "skills_taught": ["SQL"],
+    "prerequisites": [],
+    "difficulty": "Beginner",
+    "supported_goals": ["Data Analyst", "Machine Learning Engineer"]
+  },
+  {
+    "course_id": "CS104",
+    "course_name": "Data Analysis with Pandas & NumPy",
+    "description": "Data manipulation, cleaning, filtering, and numerical processing using Pandas and NumPy libraries.",
+    "skills_taught": ["Pandas", "Data Analysis"],
+    "prerequisites": ["Python Basics"],
+    "difficulty": "Intermediate",
+    "supported_goals": ["Data Analyst", "Machine Learning Engineer", "AI Research Specialist"]
+  },
+  {
+    "course_id": "CS105",
+    "course_name": "Mathematics & Statistics for AI",
+    "description": "Core mathematical concepts including linear algebra, probability, differential calculus, and descriptive statistics.",
+    "skills_taught": ["Linear Algebra", "Statistics"],
+    "prerequisites": [],
+    "difficulty": "Beginner",
+    "supported_goals": ["Machine Learning Engineer", "AI Research Specialist"]
+  },
+  {
+    "course_id": "CS106",
+    "course_name": "Machine Learning Fundamentals",
+    "description": "Supervised and unsupervised machine learning algorithms using Scikit-Learn (regression, classification, clustering).",
+    "skills_taught": ["Machine Learning", "Scikit-Learn"],
+    "prerequisites": ["Python Basics", "Pandas", "Statistics"],
+    "difficulty": "Intermediate",
+    "supported_goals": ["Machine Learning Engineer", "AI Research Specialist"]
+  },
+  {
+    "course_id": "CS107",
+    "course_name": "Deep Learning & Neural Networks",
+    "description": "Neural network architectures, backpropagation, convolutional networks, and PyTorch deep learning basics.",
+    "skills_taught": ["Deep Learning", "PyTorch"],
+    "prerequisites": ["Machine Learning"],
+    "difficulty": "Advanced",
+    "supported_goals": ["Machine Learning Engineer", "AI Research Specialist"]
+  },
+  {
+    "course_id": "CS108",
+    "course_name": "Applied MLOps & Model Deployment",
+    "description": "Packaging machine learning models into REST APIs using FastAPI, Docker basics, and deployment patterns.",
+    "skills_taught": ["MLOps", "FastAPI"],
+    "prerequisites": ["Machine Learning", "Python Basics"],
+    "difficulty": "Advanced",
+    "supported_goals": ["Machine Learning Engineer"]
+  },
+  {
+    "course_id": "CS109",
+    "course_name": "Natural Language Processing & LLMs",
+    "description": "Text processing, transformer architectures, Fine-tuning, Prompt Engineering, and Large Language Models.",
+    "skills_taught": ["NLP", "LLMs", "Prompt Engineering"],
+    "prerequisites": ["Deep Learning"],
+    "difficulty": "Advanced",
+    "supported_goals": ["AI Research Specialist"]
+  },
+  {
+    "course_id": "CS110",
+    "course_name": "Business Intelligence & Visualization",
+    "description": "Creating interactive dashboards, visual storytelling, and connecting SQL data to visualization tools.",
+    "skills_taught": ["Data Visualization", "Tableau/PowerBI"],
+    "prerequisites": ["SQL", "Data Analysis"],
+    "difficulty": "Intermediate",
+    "supported_goals": ["Data Analyst"]
+  },
+  {
+    "course_id": "CS111",
+    "course_name": "Web Scraping & Data Ingestion",
+    "description": "Extracting web data, parsing HTML/JSON, using BeautifulSoup and requests for automated data collection.",
+    "skills_taught": ["Web Scraping", "API Ingestion"],
+    "prerequisites": ["Python Basics"],
+    "difficulty": "Intermediate",
+    "supported_goals": ["Data Analyst", "Python Developer"]
+  }
+]

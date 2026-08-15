@@ -1,0 +1,22 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment variables & keys
+.env*
+!.env.example
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Output files
+outputs/*.json
+!outputs/.gitkeep
