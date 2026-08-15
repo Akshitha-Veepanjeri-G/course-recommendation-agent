@@ -106,6 +106,7 @@ course-recommendation-agent/
 │   ├── STUDENT_03_path.json
 │   └── STUDENT_04_path.json
 │
+├── app.py                       # Streamlit web interface for interactive learning-path generation
 ├── PROJECT_PLAN.md                # Architectural plan & single source of truth
 ├── README.md                      # Comprehensive user documentation & submission guide
 ├── requirements.txt               # Required Python dependencies
