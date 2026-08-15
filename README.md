@@ -58,7 +58,7 @@ graph TD
 
 ## 4. Python vs AI Responsibilities
 
-To ensure predictable behavior and eliminate course hallucinations, the agent strictly divides responsibilities between Python code and the AI model:
+To ensure predictable behavior and prevent course hallucinations, the agent strictly divides responsibilities between Python code and the AI model:
 
 ### Python Engine
 - Loads and parses JSON data files (`courses.json`, `student_profiles.json`).
@@ -76,7 +76,7 @@ To ensure predictable behavior and eliminate course hallucinations, the agent st
 - **Does NOT define or modify prerequisites** or invent non-existent course titles.
 
 ### Rationale for Separation
-- **Predictable Validity**: Deterministic Python code guarantees that prerequisites are respected and course paths are mathematically valid.
+- **Predictable Validity**: Deterministic Python code validates prerequisite dependencies and course paths against the defined catalogue rules.
 - **Reduced Risk of Hallucinations**: Restricting the AI to explaining pre-selected courses prevents the LLM from inventing non-existent courses or invalid prerequisite chains.
 - **Enhanced User Experience**: The AI focuses on natural language personalization, where generative models perform best.
 
@@ -156,7 +156,7 @@ The AI explanation module uses environment variables to authenticate with the Ge
    GEMINI_API_KEY=your_actual_gemini_api_key_here
    ```
 
-*Note: If no API key is configured or network connection is unavailable, the agent automatically engages deterministic fallback explanations, ensuring the system runs smoothly without errors.*
+*Note: If no API key is configured or network connection is unavailable, the agent automatically engages deterministic fallback explanations, allowing the agent to continue producing recommendations when the Gemini API is unavailable.*
 
 ---
 
@@ -177,7 +177,7 @@ streamlit run app.py
 ```
 
 ### What Happens When Executed:
-1. The CLI script runs integration tests and processes all 4 sample student profiles.
+1. The CLI script processes all 4 sample student profiles through the complete recommendation pipeline.
 2. The Streamlit Web UI launches a local web server (`http://localhost:8501`) allowing interactive student profile entry and path generation.
 3. For each student, Python filters goal-relevant courses, calculates topological prerequisite ordering, applies priority rules, and enriches the path with personalized explanations.
 4. Output results are printed to the console / web interface and saved as individual JSON files in the `outputs/` directory.
@@ -208,7 +208,7 @@ Below is a real sample student profile from `data/student_profiles.json` (`STUDE
 
 ## 10. Sample Output
 
-Below is a real output snippet from [`outputs/STUDENT_03_path.json`](file:///c:/Users/akshitha/Desktop/course-recommendation-agent/outputs/STUDENT_03_path.json):
+Below is the complete output from [`outputs/STUDENT_03_path.json`](file:///c:/Users/akshitha/Desktop/course-recommendation-agent/outputs/STUDENT_03_path.json):
 
 ```json
 {
@@ -234,7 +234,7 @@ Below is a real output snippet from [`outputs/STUDENT_03_path.json`](file:///c:/
       ],
       "prerequisite_status": "All prerequisites satisfied: Python Basics",
       "selection_rule": "Prerequisite Unblocking (satisfies required prerequisite for downstream goal courses)",
-      "recommendation_reason": "As step 1 of your journey toward becoming a Machine Learning Engineer, Data Analysis with Pandas & NumPy establishes the key foundational skills (Pandas, Data Analysis) suited for your background."
+      "recommendation_reason": "Since you already have a solid Python and SQL foundation, this course is the perfect starting point to transition those skills into efficient data manipulation. Mastering these core libraries will allow you to clean and prepare complex datasets for the predictive models you'll build later."
     },
     {
       "step": 2,
@@ -247,7 +247,33 @@ Below is a real output snippet from [`outputs/STUDENT_03_path.json`](file:///c:/
       ],
       "prerequisite_status": "All prerequisites satisfied: Python Basics, Pandas, Statistics",
       "selection_rule": "Prerequisite Unblocking (satisfies required prerequisite for downstream goal courses)",
-      "recommendation_reason": "Building upon your prior preparation, Machine Learning Fundamentals equips you with Machine Learning, Scikit-Learn, directing your progress toward your ultimate goal of becoming a Machine Learning Engineer."
+      "recommendation_reason": "With your data wrangling skills unlocked, your strong background in linear algebra and statistics will make grasping core algorithms feel highly intuitive. You will learn to train, evaluate, and fine-tune predictive systems using industry-standard frameworks."
+    },
+    {
+      "step": 3,
+      "course_id": "CS107",
+      "course_name": "Deep Learning & Neural Networks",
+      "difficulty": "Advanced",
+      "skills_acquired": [
+        "Deep Learning",
+        "PyTorch"
+      ],
+      "prerequisite_status": "All prerequisites satisfied: Machine Learning",
+      "selection_rule": "Goal Relevance (directly supports Machine Learning Engineer)",
+      "recommendation_reason": "Now that you understand traditional algorithms, you are ready to apply your software engineering rigor to advanced neural networks. This step guides you through building deep learning architectures capable of processing complex, high-dimensional datasets."
+    },
+    {
+      "step": 4,
+      "course_id": "CS108",
+      "course_name": "Applied MLOps & Model Deployment",
+      "difficulty": "Advanced",
+      "skills_acquired": [
+        "MLOps",
+        "FastAPI"
+      ],
+      "prerequisite_status": "All prerequisites satisfied: Machine Learning, Python Basics",
+      "selection_rule": "Goal Relevance (directly supports Machine Learning Engineer)",
+      "recommendation_reason": "This final step capitalizes on your software engineering background by taking your models out of the notebook and into the real world. You will learn how to build robust, scalable APIs to deploy and monitor your intelligent systems in a production environment."
     }
   ]
 }
@@ -305,7 +331,7 @@ If `GEMINI_API_KEY` is missing or an API network request fails, `src/ai_explaine
 Step 1 Fallback Reason: "As step 1 of your journey toward becoming a Data Analyst, Python Basics establishes the key foundational skills (Python Basics) suited for your background."
 ```
 
-This design ensures the recommendation agent remains 100% operational and outputs valid submission files even when offline.
+This design ensures the recommendation agent operates reliably and generates valid output files even when offline or when the Gemini API is unavailable.
 
 ---
 
@@ -313,7 +339,7 @@ This design ensures the recommendation agent remains 100% operational and output
 
 - **Python**: Provides clean, fast standard library execution for graph and rule processing.
 - **JSON**: Simple, human-readable data format for catalogue, profile, and output storage.
-- **Deterministic Prerequisite Logic**: Ensures prerequisite dependencies and course sequencing are mathematically valid every time.
+- **Deterministic Prerequisite Logic**: Validates prerequisite dependencies and course sequencing against the course catalogue definitions.
 - **Priority-Based Ranking**: Avoids complex numerical weight tuning in favor of explainable priority rules.
 - **LLM Explanations**: Uses generative AI where it excels—producing warm, personalized natural language rationales.
 - **Local Sample Data**: Enables instant offline testing without external database setup.
@@ -329,9 +355,9 @@ This design ensures the recommendation agent remains 100% operational and output
 
 ---
 
-## 17. Future Improvements
+## 17. Features & Future Improvements
 
-- **Interactive Web Interface**: A visual dashboard built with Vite + React or Streamlit.
+- **Interactive Web Interface**: Implemented using Streamlit (`app.py`) for interactive student profile input and learning-path generation.
 - **Dynamic Skill Assessment**: Adaptive diagnostic quizzes to verify self-reported skills.
 - **Multi-Goal Paths**: Support for hybrid career paths (e.g. Data Engineer + Machine Learning Engineer).
 
